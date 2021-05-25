@@ -7,7 +7,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-const port = 3000;
+const port = process.env.port || 3000;
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req,res) => {
